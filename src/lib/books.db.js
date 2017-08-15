@@ -21,7 +21,7 @@ export const getBooksFromFakeXHR = () => new Promise((resolve, reject) => {
 
 export const addBookToFakeXHR = (book) => new Promise((resolve, reject) => {
   setTimeout(() => {
-    book._id = Math.random();
+    book._id = Math.floor(Math.random()*10 + 1);
     booksFromFakeDB.push(book);
     resolve(booksFromFakeDB);
   }, 500);
